@@ -4,6 +4,9 @@
 # https://aka.ms/yaml
 
 #Pipeline > Stages > Jobs > Steps(Task)
+#By default the job run in parallel 
+# Free tier azure devops -> private project: one free job - max limit  - 60 minutes per job. 30 hours per month
+#                        -> public project: 10 free Microsoft-hosted parallel jobs
 trigger:
 - main
 
@@ -22,7 +25,14 @@ jobs:
     displayName: 'Run a multi-line script'
 
 - job: Job2
+  dependsOn: Job1
   steps:
   - script: echo Script in the job2
     displayName: 'Run a one-line script -> job2'
+
+- job: Job3
+  dependsOn: Job2
+  steps:
+  - script: echo Script in the job3
+    displayName: 'Run a one-line script -> job3'
 
