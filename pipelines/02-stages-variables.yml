@@ -15,7 +15,7 @@ stages:
     - bash: echo Build.BuildId -> $(Build.BuildId)
     - bash: echo Build.SourceBranchName -> $(Build.SourceBranchName)
     - bash: echo $(Build.SourcesDirectory)
-    - bash: echo System.DefaultWorkingDirectory -> $(System.DefaultWorkingDirectory)
+    - bash: echo System.DefaultWorkingDirectory | echo $(System.DefaultWorkingDirectory)
     - script: |
          echo ls -R System.DefaultWorkingDirectory
          ls -R $(System.DefaultWorkingDirectory)
