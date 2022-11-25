@@ -10,11 +10,11 @@ stages:
   - job: FirstJob
     steps:
     - bash: echo Build FirstJob
-    - bash: echo $(PipelineLevelVariable)
+    - bash: echo $(PipelineLevelVariable) #In azure devops, you can check the option "Variables" in the pipeline yml interface
     - bash: echo Build.BuildNumber -> $(Build.BuildNumber)
     - bash: echo Build.BuildId -> $(Build.BuildId)
     - bash: echo Build.SourceBranchName -> $(Build.SourceBranchName)
-    - bash: echo Build.SourcesDirectory -> $(Build.SourcesDirectory)
+    - bash: echo $(Build.SourcesDirectory)
     - bash: echo System.DefaultWorkingDirectory -> $(System.DefaultWorkingDirectory)
     - script: |
          echo ls -R System.DefaultWorkingDirectory
