@@ -25,7 +25,7 @@ stages:
     - bash: python --version 
     - bash: mvn -version 
     - script: |
-         echo ls -R $(Build.ArtifactStagingDirectory)
+         echo ls -R Build.ArtifactStagingDirectory
          ls -R $(Build.ArtifactStagingDirectory)
     - task: CopyFiles@2
       inputs:
