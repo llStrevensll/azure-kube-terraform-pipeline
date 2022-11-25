@@ -8,7 +8,7 @@
 # Free tier azure devops -> private project: one free job - max limit  - 60 minutes per job. 30 hours per month
 #                        -> public project: 10 free Microsoft-hosted parallel jobs
 trigger:
-- main
+#- main
 
 pool:
   vmImage: ubuntu-latest
