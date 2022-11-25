@@ -10,8 +10,8 @@
 
 #Settings Pipeline ->  Processing of new run requests -> disabled
 
-#trigger:
-#- main
+trigger:
+- main
 
 pool:
   vmImage: ubuntu-latest
