@@ -17,7 +17,7 @@ stages:
     - bash: echo Build.SourcesDirectory -> $(Build.SourcesDirectory)
     - bash: echo System.DefaultWorkingDirectory -> $(System.DefaultWorkingDirectory)
     - script: |
-         echo ls -R $(System.DefaultWorkingDirectory) 
+         echo ls -R System.DefaultWorkingDirectory
          ls -R $(System.DefaultWorkingDirectory)
     - bash: echo Build.ArtifactStagingDirectory -> $(Build.ArtifactStagingDirectory)
     - bash: java -version
