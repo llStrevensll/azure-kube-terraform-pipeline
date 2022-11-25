@@ -14,12 +14,12 @@ stages:
     - bash: echo Build.BuildNumber -> $(Build.BuildNumber)
     - bash: echo Build.BuildId -> $(Build.BuildId)
     - bash: echo Build.SourceBranchName -> $(Build.SourceBranchName)
-    - bash: echo $(Build.SourcesDirectory)
+    - bash: echo Build.SourcesDirectory | echo $(Build.SourcesDirectory)
     - bash: echo System.DefaultWorkingDirectory | echo $(System.DefaultWorkingDirectory)
     - script: |
          echo ls -R System.DefaultWorkingDirectory
          ls -R $(System.DefaultWorkingDirectory)
-    - bash: echo Build.ArtifactStagingDirectory -> $(Build.ArtifactStagingDirectory)
+    - bash: echo Build.ArtifactStagingDirectory | echo $(Build.ArtifactStagingDirectory)
     - bash: java -version
     - bash: node --version
     - bash: python --version 
