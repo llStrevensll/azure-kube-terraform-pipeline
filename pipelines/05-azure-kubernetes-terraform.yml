@@ -20,8 +20,8 @@ steps:
       ensureBackend: true
       backendAzureRmResourceGroupName: 'terraform-backend-rg'
       backendAzureRmResourceGroupLocation: 'eastus'
-      backendAzureRmStorageAccountName: 'storageAccountStrevensAks'
-      backendAzureRmContainerName: 'containerStrevensAks'
+      backendAzureRmStorageAccountName: 'storageaccountstrevensaks'
+      backendAzureRmContainerName: 'containerstrevensaks'
       backendAzureRmKey: 'aks-dev.tfstate'
       allowTelemetryCollection: true
   - script: echo k8s terraform
