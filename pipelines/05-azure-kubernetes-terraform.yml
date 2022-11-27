@@ -20,7 +20,7 @@ steps:
       ensureBackend: true
       backendAzureRmResourceGroupName: 'terraform-backend-rg'
       backendAzureRmResourceGroupLocation: 'eastus'
-      backendAzureRmStorageAccountName: 'storageaccountstrevensaks'
+      backendAzureRmStorageAccountName: 'storageaccstrevensaks'
       backendAzureRmContainerName: 'containerstrevensaks'
       backendAzureRmKey: 'aks-dev.tfstate'
       allowTelemetryCollection: true
