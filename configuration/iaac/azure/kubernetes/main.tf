@@ -3,10 +3,7 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 
-provider "azurerm" {
-  //version = "~>2.0.0"
-  features {}
-}
+
 
 resource "azurerm_kubernetes_cluster" "terraform-k8s" {
   name                = "${var.cluster_name}_${var.environment}"
@@ -29,6 +26,7 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
     # vm_size         = "standard_d2as_v5"      CHANGE IF AN ERROR ARISES 
   }
 
+  #Connection with azure
   service_principal {
     client_id     = var.client_id
     client_secret = var.client_secret
@@ -36,14 +34,5 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
 
   tags = {
     Environment = var.environment
-  }
-}
-
-terraform {
-  backend "azurerm" {
-    # storage_account_name="<<storage_account_name>>" #OVERRIDE in TERRAFORM init
-    # access_key="<<storage_account_key>>" #OVERRIDE in TERRAFORM init
-    # key="<<env_name.k8s.tfstate>>" #OVERRIDE in TERRAFORM init
-    # container_name="<<storage_account_container_name>>" #OVERRIDE in TERRAFORM init
   }
 }

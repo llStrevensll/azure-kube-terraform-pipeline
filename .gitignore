@@ -12,6 +12,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+#Terraform
 .terraform
 *.terraform.tfstate
 *.terraform.tfstate.backup
