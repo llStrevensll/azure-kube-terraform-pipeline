@@ -18,7 +18,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'llstrevensll-docker-hub'
+        containerRegistry: 'llstrevensll-dockerhub'
         repository: 'llstrevensll/currency-exchange-devops'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
